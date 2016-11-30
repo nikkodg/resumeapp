@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var mongojs = require('mongojs');
-var db mongojs('resumeapp', ['resumeapp']);"type"
+var db mongojs('resumeapp', ['resumeapp']);
 
 app.use(express.static(__dirname + "/public"));
 
