@@ -1,0 +1,91 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    
+   <title>Resume App</title>
+    </head>
+<body>
+    
+    
+    <div class="container" ng-controller="AppCtrl">
+    <h1>Nikko's Resume</h1>
+        
+    <table class="table">
+        <thead>
+        
+        <tr>
+            <th>Education</th>
+            <th>Degree</th>
+            <th>Last Year</th>
+            </tr>
+        
+        
+        </thead>
+        
+        <tbody>
+        <tr ng-repeat="context in resumeapp">
+            <td>{{context.school}}</td>
+            <td>{{context.degree}}</td>
+            <td>{{context.last_year}}</td>
+            </tr>
+        </tbody>
+        
+        
+        </table>    
+        
+    <table class="table">
+        
+        <thead>
+        
+        <tr>
+            <th>Skills</th>
+            </tr>
+        
+        
+        </thead>
+        
+        <tbody>
+        <tr ng-repeat="context in resumeapp">
+            <td>{{context.skill}}</td>
+            </tr>
+        </tbody>
+        
+        
+        </table>
+        
+    <table class="table">
+        
+        <thead>
+        
+        <tr>
+            <th>Projects</th>
+            <th>Description</th>
+            </tr>
+        
+        
+        </thead>
+        
+        <tbody>
+        <tr ng-repeat="context in resumeapp">
+            <td>{{context.title}}</td>
+            <td>{{context.description}}</td>
+            </tr>
+        </tbody>
+        
+        </table>    
+        
+        
+        
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    
+    <script src="controllers/controller.js"></script>
+    </body>
+</html>
